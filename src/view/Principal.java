@@ -1,15 +1,16 @@
 package view;
 
-import controller.ThreadID;
+import controller.ThreadCalc;
 
 public class Principal {
 
 	public static void main (String[] args) {
 		
-		for (int idThread = 0 ; idThread < 5 ; idThread++) {
-			Thread threadId = new ThreadID(idThread);
-			threadId.start();
-			}
+		for (int a = 0 ; a < 4 ; a++) {
+			Thread tCalc = new ThreadCalc(a);
+			tCalc.start();
+		
+		}
 		
 	}
 	
